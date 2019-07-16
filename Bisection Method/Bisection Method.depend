@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1563246244 source:c:\users\lab7\documents\imh1000617\bisection method\new.c
+	<stdio.h>
+	<math.h>
+
+1563249030 source:c:\users\lab7\documents\imh1000617\bisection method\main.c
+	<stdio.h>
+	<stdlib.h>
+
