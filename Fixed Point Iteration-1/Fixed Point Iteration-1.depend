@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1564459537 source:c:\users\bit\documents\imh1000617\fixed point iteration-1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
