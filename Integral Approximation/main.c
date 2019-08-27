@@ -70,7 +70,5 @@ int main()
     printf("3. Using simpson 3/8th rule (n=10)=> %6.4f\t(err = %6.4f)\n", 4*simpson38(x0, xn, 10), 4*(atan(1)-simpson38(x0, xn, 10)));
     printf("3. Using simpson 3/8th rule (n=20)=> %6.4f\t(err = %6.4f)\n", 4*simpson38(x0, xn, 20), 4*(atan(1)-simpson38(x0, xn, 20)));
 
-
-
     return 0;
 }
