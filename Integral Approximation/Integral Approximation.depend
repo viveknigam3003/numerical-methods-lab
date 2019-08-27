@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1566875816 source:c:\users\bit\documents\imh1000617\integral approximation\main.c
+	<stdio.h>
+	<stdlib.h>
+
