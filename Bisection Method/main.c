@@ -9,7 +9,7 @@ Lab - Numerical Methods Lab - 1
 
 float func (float x)
 {
-    return (x*x - 50);
+    return (x*x - 10);
 }
 
 void bisection(float a, float b)

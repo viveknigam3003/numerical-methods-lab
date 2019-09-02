@@ -36,8 +36,6 @@ int main()
     scanf("%f", &x);
     x0=x;
     float a[4];
-    //printf("\nEnter number of iterations:");
-    //scanf("%d", &iter);
 
     printf("\nUsing Function 1:-");
     for (i=1; i<=iter; i++)
@@ -75,7 +73,7 @@ int main()
     printf("\n|x-x1| = %f\n", a[2]);
     x1=0;x=x0;
 
-    printf("\nUsing Function 2:-");
+    printf("\nUsing Function 4:-");
     for (i=1; i<=iter; i++)
     {
         x1=func4(x);
@@ -87,7 +85,12 @@ int main()
     printf("\n|x-x1| = %f\n", a[3]);
     x1=0;x=x0;
 
-    //printf("\n\nRoot After %d iteration = %f", iter, x1);
+    printf("\nReport:\n");
+    for (i = 0; i<4; i++)
+    {
+        printf("Error Using func %d = %f\n", (i+1), a[i]);
+    }
+    
     return 0;
 }
 

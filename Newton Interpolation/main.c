@@ -1,47 +1,59 @@
 #include<stdio.h>
-#define MAXN 100
-#define ORDER 4
 
-main()
+float newton(float x[],float y[], float a, int n)
 {
-    float ax[MAXN+1], ay [MAXN+1], diff[MAXN+1][ORDER+1], nr=1.0, dr=1.0,x,p,h,yp;
-    int n,i,j,k;
-    printf("\nEnter the value of n:\n");
-    scanf("%d",&n);
+	float D[n][n];
+	int i,j,k;
+	
+	//defining first column of D to be y or f(x)
+	for(i=0;i<n;i++)
+		D[i][0] = y[i];
+		
+	//defining the rest of the array D
+	//note that we start with both i & j = 1
+	for(i=1;i<n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			D[i][j] =( D[i][j-1]- D[i-1][j-1] )/( x[i] - x[i-j] );
+		}
+	}
+	
+	//Now the diagonal of D holds the values of the coefficient 
+	for(i=0;i<n;i++)
+		printf("\n%dth coefficient is : %f",i,D[i][i]);
+		
+	float sum, prod;
+	
+	//Creating newton's polynomials
+	for(i=0;i<n;i++)
+	{
+		sum=D[0][0];		
+		for(j=1;j<i;j++)
+		{
+			prod = 1;
+			for(k=0;k<j;k++)
+			{
+				prod*=(a-x[k]);
+			}
+			sum+=D[j][j]*prod;
+			
+		}
+		
+		printf("\nValue of f(%f) from polynomial %d is : %f",a,i,sum);
+	}
+}
 
-    printf("\nEnter the values in form x,y:\n");
-    for (i=0;i<=n;i++)
-        scanf("%f %f",&ax[i],&ay[i]);
-    printf("\nEnter the value of x for which the value of y is wanted: \n");
-    scanf("%f",&x);
-    h=ax[1]-ax[0];
-
-    //now making the difference table
-    //calculating the 1st order of differences
-    for (i=0;i<=n-1;i++)
-        diff[i][1] = ay[i+1]-ay[i];
-
-    //now calculating the second and higher order differences
-    for (j=2;j<=ORDER;j++)
-        for(i=0;i<=n-j;i++)
-        diff[i][j] = diff[i+1][j-1] - diff[i][j-1];
-
-    //now finding x0
-    i=0;
-    while (!(ax[i]>x))
-        i++;
-
-    //now ax[i] is x0 and ay[i] is y0
-    i--;
-    p = (x-ax[i])/h;
-    yp = ay[i];
-
-    //now carrying out interpolation
-    for (k=1;k<=ORDER;k++)
-    {
-        nr *=p-k+1;
-        dr *=k;
-        yp +=(nr/dr)*diff[i][k];
-    }
-    printf("\nWhen x = %6.1f, corresponding y = %6.2f\n",x,yp);
+int main()
+{
+	//defining array size
+    int n = 7;
+    
+    float x[n]={1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3};
+    float y[n]={5.474, 6.050, 6.686, 7.8166, 9.025, 9.974};
+    
+    float x1 = 1.85;
+    float x2 = 2.25;
+    newton(x,y,x1,n);
+    newton(x,y,x2,n);   
 }
