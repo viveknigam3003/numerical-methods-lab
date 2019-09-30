@@ -11,9 +11,11 @@ Birla Institute of Technology, Mesra.<br/>
 ### Lab-3
 1. Check for the [speed of convergence](https://en.wikipedia.org/wiki/Rate_of_convergence) of functions to approximate a polynomial.
 2. Approximating using [Fixed Point Iteration](https://en.wikipedia.org/wiki/Fixed-point_iteration) Method.
+<img src="/Assignments/A3.jpg" alt="Assignment 3"/>
 ### Lab-4
 1. Approximate all the real zeros of polynomial using [Newton-Raphson](https://en.wikipedia.org/wiki/Newton%27s_method) and [Secant](https://en.wikipedia.org/wiki/Secant_method) Method.
 2. Approximating using [Modified Newton Raphson](http://mathfaculty.fullerton.edu/mathews/n2003/newtonacceleratemod.html) Method.
+<img src="/Assignments/A4.jpg" alt="Assignment 4"/>
 ### Lab-5
 1. Using Lagrange's Interpolation formula to estimate the value of `y` using a given table.
 2. Using Newton's Interpolation formula to estimate the same.
