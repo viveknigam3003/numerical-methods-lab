@@ -23,10 +23,12 @@ Birla Institute of Technology, Mesra.<br/>
 ### Lab-5
 1. Using Lagrange's Interpolation formula to estimate the value of `y` using a given table.
 2. Using Newton's Interpolation formula to estimate the same.
+[Newton Interpolation](http://mathfaculty.fullerton.edu/mathews/n2003/newtonpoly/NewtonPolyProof.pdf) Method.
 <img src="/Assignments/A5.jpg" alt="Assignment 5"/>
 
 ### Lab-6
 1. Using Hermite Polynomial to approximate the value of a function.
+
 
 ### Lab-7
 1. Calculate value of pi using [integral approximation](https://math.stackexchange.com/questions/22777/calculate-pi-precisely-using-integrals) and comparing the three methods trapezoidal, simpson's 1/3rd rule, and simpson's 3/8th rule.
