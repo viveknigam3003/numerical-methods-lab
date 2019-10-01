@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1569906810 source:/home/hduser/Desktop/numerical-methods-lab/Gauss Jordan/main.c
+	<stdio.h>
+	<math.h>
+

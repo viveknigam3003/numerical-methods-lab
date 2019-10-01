@@ -12,15 +12,6 @@ void swap_row(double mat[N][N+1], int i, int j)
     }
 }
 
-void print(double mat[N][N+1])
-{
-    for (int i=0; i<N; i++, printf("\n"))
-        for (int j=0; j<=N; j++)
-            printf("%lf ", mat[i][j]);
-
-    printf("\n");
-}
-
 int forwardElim(double mat[N][N+1])
 {
     for (int k=0; k<N; k++)
@@ -75,7 +66,7 @@ void backSub(double mat[N][N+1])
 
     printf("\nSolution for the system:\n");
     for (int i=0; i<N; i++)
-        printf("x%d = %lf\n", (i+1), x[i]);
+        printf("x%d = %6.3lf\n", (i+1), x[i]);
 }
 
 void gaussianElimination(double mat[N][N+1])
