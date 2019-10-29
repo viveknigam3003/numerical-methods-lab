@@ -2,7 +2,7 @@
 #include<math.h>
 #define ESP 0.0001
 #define X1(x2,x3,x4) ((-2 - x2 + x3 - x4)/4)
-#define X2(x1,x2,x3) ((-1 - x1 + x3 + x4)/4)
+#define X2(x1,x3,x4) ((-1 - x1 + x3 + x4)/4)
 #define X3(x1,x2,x4) ((x1 + x2 - x4)/5)
 #define X4(x1,x2,x3) ((1 - x1 + x2 - x3)/3)
 
